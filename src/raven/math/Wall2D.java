@@ -5,6 +5,8 @@ import java.io.Writer;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+import dddview.View3D;
+
 import raven.ui.GameCanvas;
 
 @XStreamAlias("Wall2D")
@@ -48,6 +50,9 @@ public class Wall2D {
 	
 	public void render(boolean renderNormals) {
 		GameCanvas.line(vA, vB);
+		
+		System.out.println("Trying to add a wall to 3d view...");
+		View3D.addWall(vA, vB);
 		
 		if (renderNormals) {
 			int midX = (int)((vA.x + vB.x) / 2);

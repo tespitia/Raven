@@ -13,6 +13,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 import raven.math.Vector2D;
+import dddview.View3D;
+
 
 @SuppressWarnings("serial")
 public class GameCanvas extends Canvas {
@@ -50,6 +52,7 @@ public class GameCanvas extends Canvas {
 	// Drawing start/stop
 	public static void startDrawing(int width, int height) {
 		getInstance().create(width, height);
+		
 	}
 	
 	protected void create(int width, int height) {
